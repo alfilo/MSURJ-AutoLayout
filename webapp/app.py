@@ -122,6 +122,7 @@ def convert():
             bibtex_content=bibtex,
             output_root=output_root,
             template_dir=TEMPLATE_DIR,
+            figures_dir=ir_output_dir / "Figures",
         )
 
         zip_bytes = io.BytesIO()

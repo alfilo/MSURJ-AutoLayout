@@ -1,6 +1,6 @@
 # MSURJ AutoLayout
 
-Every year, the MSURJ editorial board spends hours formatting papers into LaTeX, despite the fact that most of our editors don't know how to use LaTeX. This tool takes a pre-processed `.docx` manuscript and produces an Overleaf-ready folder in the MSURJ LaTeX format. The output is a ZIP file containing the manuscript `.tex`, figures, fonts, the `msurj.cls` file, and a generated `bib.bib` when citations are detected.
+Every year, the MSURJ editorial board spends hours formatting accepted papers into LaTeX. Because most of our editors don't use LaTeX regularly, a more streamlined layout process is needed. This tool takes a pre-processed `.docx` manuscript and produces an Overleaf-ready folder in the MSURJ LaTeX format. The output is a ZIP file containing the manuscript `.tex`, figures, fonts, the `msurj.cls` file, and a generated `bib.bib` when citations are detected.
 
 The easiest way to use it is through the web app.
 

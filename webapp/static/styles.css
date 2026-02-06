@@ -50,6 +50,21 @@ body {
   font-weight: 700;
 }
 
+.title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding-right: 16px;
+}
+
+.title-logo {
+  width: 72px;
+  height: 72px;
+  object-fit: contain;
+  margin-left: 0;
+}
+
 .sub {
   color: var(--muted);
   margin: 0;
@@ -179,6 +194,28 @@ input {
   box-shadow: 0 8px 18px rgba(72, 8, 0, 0.25);
 }
 
+.banner {
+  width: min(980px, 92vw);
+  margin: 18px auto 40px;
+  padding: 14px 18px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: rgba(247, 233, 214, 0.85);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+
+.banner p {
+  margin: 0;
+  color: var(--ink);
+}
+
+.banner a {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
 .field-title {
   font-family: "EB Garamond", "Garamond", serif;
   font-size: 0.95rem;
@@ -230,6 +267,16 @@ input {
 
   .author-row {
     grid-template-columns: 1fr;
+  }
+
+  .banner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .title-logo {
+    width: 56px;
+    height: 56px;
   }
 }
 .author-label {

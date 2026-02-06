@@ -102,6 +102,7 @@ def create_output_directory(
     *,
     output_root=None,
     template_dir=None,
+    figures_dir=None,
 ):
     project_root = Path.cwd()
     paper_num = Path(pandoc_tex_path).stem
@@ -127,11 +128,19 @@ def create_output_directory(
         dirs_exist_ok=True
     )
 
-    shutil.copytree(
-        project_root / "data" / "ir_tex" / paper_num / "Figures",
-        output_dir / "Figures",
-        dirs_exist_ok=True
-    )
+    if figures_dir is None:
+        figures_dir = project_root / "data" / "ir_tex" / paper_num / "Figures"
+    else:
+        figures_dir = Path(figures_dir)
+
+    if figures_dir.exists():
+        shutil.copytree(
+            figures_dir,
+            output_dir / "Figures",
+            dirs_exist_ok=True
+        )
+    else:
+        (output_dir / "Figures").mkdir(parents=True, exist_ok=True)
 
     if bibtex_content:
         bib_path = output_dir / "bib.bib"

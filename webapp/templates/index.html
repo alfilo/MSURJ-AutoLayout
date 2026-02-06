@@ -10,7 +10,14 @@
     <div class="bg"></div>
     <main class="card">
       <header class="header">
-        <h1>MSURJ AutoLayout</h1>
+        <div class="title-row">
+          <h1>MSURJ AutoLayout</h1>
+          <img
+            class="title-logo"
+            src="{{ url_for('static', filename='msurj_logo.png') }}"
+            alt="MSURJ Logo"
+          />
+        </div>
         <p class="sub">
           Upload a pre-processed Word document and fill in the metadata form. This tool creates an Overleaf-ready
           folder of the LaTeX-formatted manuscript.
@@ -99,6 +106,12 @@
         <button type="submit" class="submit">Build ZIP</button>
       </form>
     </main>
+
+    <footer class="banner">
+      <p>
+        Having issues? <a href="https://github.com/yshahzad/MSURJ-AutoLayout/issues">Let me know here.</a>
+      </p>
+    </footer>
 
     <script>
       const input = document.getElementById("manuscript");

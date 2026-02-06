@@ -26,7 +26,14 @@ def create_tex_ir(input_docx, *, ir_tex_dir=None):
         "--wrap=none"
     ])
 
-    (output_dir / "media").rename(output_dir / "Figures")
+    media_dir = output_dir / "media"
+    figures_dir = output_dir / "Figures"
+    if media_dir.exists():
+        if figures_dir.exists():
+            shutil.rmtree(figures_dir)
+        media_dir.rename(figures_dir)
+    else:
+        figures_dir.mkdir(parents=True, exist_ok=True)
 
     print(f"Files created in:\n{output_dir.resolve()}")
     return output_dir
