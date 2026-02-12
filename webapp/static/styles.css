@@ -196,7 +196,7 @@ input {
 
 #footer, #topnav {
   width: min(980px, 92vw);
-  margin: 18px auto 40px;
+  margin: 18px auto;
   padding: 14px 18px;
   display: flex;
   align-items: center;
@@ -211,7 +211,7 @@ input {
   color: var(--ink);
 }
 
-#footer a, #topnav a {
+a {
   color: var(--accent);
   text-decoration: underline;
 }
